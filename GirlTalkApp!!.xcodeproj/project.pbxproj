@@ -16,6 +16,7 @@
 		165DAB2E24BED7BF000C58F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 165DAB2C24BED7BF000C58F8 /* LaunchScreen.storyboard */; };
 		165DAB3924BED7C0000C58F8 /* GirlTalkApp__Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165DAB3824BED7C0000C58F8 /* GirlTalkApp__Tests.swift */; };
 		165DAB4424BED7C0000C58F8 /* GirlTalkApp__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165DAB4324BED7C0000C58F8 /* GirlTalkApp__UITests.swift */; };
+		76D0EBE624BFB0560099DDF9 /* AdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0EBE524BFB0560099DDF9 /* AdviceTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		165DAB3F24BED7C0000C58F8 /* GirlTalkApp!!UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GirlTalkApp!!UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		165DAB4324BED7C0000C58F8 /* GirlTalkApp__UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GirlTalkApp__UITests.swift; sourceTree = "<group>"; };
 		165DAB4524BED7C0000C58F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76D0EBE524BFB0560099DDF9 /* AdviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				165DAB2C24BED7BF000C58F8 /* LaunchScreen.storyboard */,
 				165DAB2F24BED7BF000C58F8 /* Info.plist */,
 				165DAB2724BED7BB000C58F8 /* GirlTalkApp__.xcdatamodeld */,
+				76D0EBE524BFB0560099DDF9 /* AdviceTableViewController.swift */,
 			);
 			path = "GirlTalkApp!!";
 			sourceTree = "<group>";
@@ -266,6 +269,7 @@
 				165DAB1F24BED7BB000C58F8 /* AppDelegate.swift in Sources */,
 				165DAB2124BED7BB000C58F8 /* SceneDelegate.swift in Sources */,
 				165DAB2924BED7BB000C58F8 /* GirlTalkApp__.xcdatamodeld in Sources */,
+				76D0EBE624BFB0560099DDF9 /* AdviceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
