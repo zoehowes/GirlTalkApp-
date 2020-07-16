@@ -89,10 +89,49 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <segue destination="IDP-e3-dFU" kind="show" identifier="moveToComplete" id="NHD-N2-iau"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uv2-kL-hw3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1455" y="-269"/>
+        </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="zBU-hs-Seq">
+            <objects>
+                <viewController id="IDP-e3-dFU" customClass="AnswerViewController" customModule="GirlTalkApp__" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oa3-Vh-3Yx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HAn-e3-wQM">
+                                <rect key="frame" x="146" y="517" width="101" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reply"/>
+                                <connections>
+                                    <action selector="replyTapped:" destination="IDP-e3-dFU" eventType="touchUpInside" id="ENg-pR-Wec"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-PC-OaM">
+                                <rect key="frame" x="176" y="195" width="146" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="aUl-rd-a3I"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rJ7-UI-naP"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="gSz-PC-OaM" id="ML0-wU-eeR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MHZ-YL-0AN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1453.6231884057972" y="440.625"/>
         </scene>
         <!--Ask Question View Controller-->
         <scene sceneID="VXC-Ez-hkx">
@@ -133,12 +172,20 @@
                                 <state key="normal" title="POST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="postTapped:" destination="nGw-Xi-LkF" eventType="touchUpInside" id="gQy-3o-rEJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72905906789999997" green="0.4090076668" blue="0.53544208419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="sSs-oT-edw"/>
                     </view>
                     <navigationItem key="navigationItem" id="6pl-DJ-1pM"/>
+                    <connections>
+                        <outlet property="anonymousSwitch" destination="O0U-nh-tGA" id="RBP-ox-tjc"/>
+                        <outlet property="postTapped" destination="UUt-jF-X3V" id="UUr-0w-vFY"/>
+                        <outlet property="titleTextField" destination="1go-KV-3eJ" id="6Wa-fH-RlK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cvr-dK-Gxq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

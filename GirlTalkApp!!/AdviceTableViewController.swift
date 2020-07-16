@@ -9,15 +9,39 @@
 import UIKit
 
 class AdviceTableViewController: UITableViewController {
+    
+    var questions : [AdviceColumnCD] = []
+    
+ 
+        func getQuestions() {
+                 if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                   
+                   if let coreDataQuestions = try? context.fetch(AdviceColumnCD.fetchRequest()) as? [AdviceColumnCD] {
+                       questions = coreDataQuestions
+                       
+                       tableView.reloadData()
+
+      }
+    }
+    /*func askQuestions() -> [AdviceColumn] {
+
+      let relationshipFake = AdviceColumn()
+      relationshipFake.name = "A question about relationships"
+      relationshipFake.anonymous = false
+
+      let schoolFake = AdviceColumn()
+      schoolFake.name = "A question about school"
+      // important is set to false by default
+
+        return [relationshipFake, schoolFake]*/
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
+        
     }
 
     // MARK: - Table view data source
@@ -29,62 +53,53 @@ class AdviceTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return questions.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
+        let question = questions[indexPath.row]
+        
+        if let name = question.name {
+            if question.anonymous {
+                cell.textLabel?.text = "Anonymous:" + name
+            
+        } else {
+          cell.textLabel?.text = question.name
+        }
+        }
+        return cell
+
         // Configure the cell...
 
-        return cell
+        }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+
+      // this gives us a single ToDo
+      let question = questions[indexPath.row]
+
+      performSegue(withIdentifier: "moveToComplete", sender: question)
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    
+    
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+        if let addVC = segue.destination as? askQuestionViewController {
+          addVC.previousVC = self
+        }
+        if let completeVC = segue.destination as? AnswerViewController {
+          if let question = sender as? AdviceColumnCD {
+            completeVC.selectedAdviceColumn = question
+            completeVC.previousVC = self
+          }
+        }
+    
 
 }
+}
+
+

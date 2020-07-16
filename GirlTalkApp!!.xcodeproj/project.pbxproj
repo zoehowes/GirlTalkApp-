@@ -18,6 +18,8 @@
 		165DAB4424BED7C0000C58F8 /* GirlTalkApp__UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 165DAB4324BED7C0000C58F8 /* GirlTalkApp__UITests.swift */; };
 		477FC21624C0CAED0000883F /* askQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 477FC21524C0CAED0000883F /* askQuestionViewController.swift */; };
 		76D0EBE624BFB0560099DDF9 /* AdviceTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0EBE524BFB0560099DDF9 /* AdviceTableViewController.swift */; };
+		76D0EBE824C0DBCB0099DDF9 /* AdviceColumn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0EBE724C0DBCB0099DDF9 /* AdviceColumn.swift */; };
+		76D0EBEA24C0F0490099DDF9 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76D0EBE924C0F0490099DDF9 /* AnswerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		165DAB4524BED7C0000C58F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		477FC21524C0CAED0000883F /* askQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = askQuestionViewController.swift; sourceTree = "<group>"; };
 		76D0EBE524BFB0560099DDF9 /* AdviceTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceTableViewController.swift; sourceTree = "<group>"; };
+		76D0EBE724C0DBCB0099DDF9 /* AdviceColumn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceColumn.swift; sourceTree = "<group>"; };
+		76D0EBE924C0F0490099DDF9 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 				165DAB2724BED7BB000C58F8 /* GirlTalkApp__.xcdatamodeld */,
 				76D0EBE524BFB0560099DDF9 /* AdviceTableViewController.swift */,
 				477FC21524C0CAED0000883F /* askQuestionViewController.swift */,
+				76D0EBE724C0DBCB0099DDF9 /* AdviceColumn.swift */,
+				76D0EBE924C0F0490099DDF9 /* AnswerViewController.swift */,
 			);
 			path = "GirlTalkApp!!";
 			sourceTree = "<group>";
@@ -272,7 +278,9 @@
 				165DAB1F24BED7BB000C58F8 /* AppDelegate.swift in Sources */,
 				477FC21624C0CAED0000883F /* askQuestionViewController.swift in Sources */,
 				165DAB2124BED7BB000C58F8 /* SceneDelegate.swift in Sources */,
+				76D0EBEA24C0F0490099DDF9 /* AnswerViewController.swift in Sources */,
 				165DAB2924BED7BB000C58F8 /* GirlTalkApp__.xcdatamodeld in Sources */,
+				76D0EBE824C0DBCB0099DDF9 /* AdviceColumn.swift in Sources */,
 				76D0EBE624BFB0560099DDF9 /* AdviceTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
