@@ -94,10 +94,10 @@
             </objects>
             <point key="canvasLocation" x="1455" y="-269"/>
         </scene>
-        <!--View Controller-->
+        <!--Ask Question View Controller-->
         <scene sceneID="VXC-Ez-hkx">
             <objects>
-                <viewController id="nGw-Xi-LkF" sceneMemberID="viewController">
+                <viewController id="nGw-Xi-LkF" customClass="askQuestionViewController" customModule="GirlTalkApp__" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdP-s7-xSs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
