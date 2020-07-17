@@ -18,7 +18,7 @@ class AdviceTableViewController: UITableViewController {
                    
                    if let coreDataQuestions = try? context.fetch(AdviceColumnCD.fetchRequest()) as? [AdviceColumnCD] {
                        questions = coreDataQuestions
-                       
+                       print (questions)
                        tableView.reloadData()
 
       }
@@ -43,12 +43,15 @@ class AdviceTableViewController: UITableViewController {
     
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        getQuestions()
+    }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

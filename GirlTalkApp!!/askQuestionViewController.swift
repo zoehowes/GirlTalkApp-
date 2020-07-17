@@ -18,6 +18,7 @@ class askQuestionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
     @IBAction func postTapped(_ sender: Any) {
     // we have to grab this view context to be able to work with Core Data
       if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
@@ -31,6 +32,7 @@ class askQuestionViewController: UIViewController {
             // this .name and .important came from the attributes you typed in on the Core Data page!
             question.name = titleText
             question.anonymous = anonymousSwitch.isOn
+            print (question.name)
         }
 
         try? context.save()

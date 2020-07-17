@@ -56,7 +56,7 @@
             </objects>
             <point key="canvasLocation" x="-425" y="-269"/>
         </scene>
-        <!--Advice Table View Controller-->
+        <!--Advice Column-->
         <scene sceneID="Re0-ba-TGv">
             <objects>
                 <tableViewController id="OFn-VJ-d3M" customClass="AdviceTableViewController" customModule="GirlTalkApp__" customModuleProvider="target" sceneMemberID="viewController">
@@ -65,7 +65,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zZN-MF-Oae">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseIdentifier" id="zZN-MF-Oae">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zZN-MF-Oae" id="ggt-of-K5O">
@@ -80,7 +80,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="sID-KQ-YBC">
+                    <navigationItem key="navigationItem" title="Advice Column" id="sID-KQ-YBC">
                         <barButtonItem key="leftBarButtonItem" title="Item" systemItem="search" id="vad-0o-CFF"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="6sk-kF-j9W">
                             <connections>
@@ -113,10 +113,10 @@
                                     <action selector="replyTapped:" destination="IDP-e3-dFU" eventType="touchUpInside" id="ENg-pR-Wec"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-PC-OaM">
-                                <rect key="frame" x="176" y="195" width="146" height="43"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSz-PC-OaM">
+                                <rect key="frame" x="87" y="165" width="243" height="273"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -172,6 +172,9 @@
                                 <state key="normal" title="POST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="postTapped:" destination="nGw-Xi-LkF" eventType="touchUpInside" id="VTZ-Q2-N1C"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72905906789999997" green="0.4090076668" blue="0.53544208419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
