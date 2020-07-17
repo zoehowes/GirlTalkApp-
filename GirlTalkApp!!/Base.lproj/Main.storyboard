@@ -154,7 +154,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O0U-nh-tGA">
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="O0U-nh-tGA">
                                 <rect key="frame" x="243" y="468" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </switch>
@@ -172,7 +172,6 @@
                                 <state key="normal" title="POST">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                               
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.72905906789999997" green="0.4090076668" blue="0.53544208419999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -181,7 +180,6 @@
                     <navigationItem key="navigationItem" id="6pl-DJ-1pM"/>
                     <connections>
                         <outlet property="anonymousSwitch" destination="O0U-nh-tGA" id="RBP-ox-tjc"/>
-                        
                         <outlet property="titleTextField" destination="1go-KV-3eJ" id="6Wa-fH-RlK"/>
                     </connections>
                 </viewController>
